@@ -1,4 +1,5 @@
 import { startOfHour } from 'date-fns';
+
 import Appointment from '../models/Appointment';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
 
