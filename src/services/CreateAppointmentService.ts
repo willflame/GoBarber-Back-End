@@ -19,7 +19,7 @@ class CreateAppointmentService {
     const appointmentDate = startOfHour(date);
 
     // Verifica se já existe um agendamento no mesmo horario, se existir retorna =  true
-    const findAppointmentInSameDate = appointmentsRepository.findByDate(
+    const findAppointmentInSameDate = await appointmentsRepository.findByDate(
       appointmentDate,
     );
 
