@@ -6,11 +6,11 @@ import CreateAppointmentService from './CreateAppointmentService';
 describe('CreateAppointiment', () => {
   it('should be able to create a new appointment', async () => {
     const fakeAppointmentsRepository = new FakeAppointmentsRepository();
-    const createAppointment = new CreateAppointmentService(
+    const createAppointmentService = new CreateAppointmentService(
       fakeAppointmentsRepository,
     );
 
-    const appointment = await createAppointment.execute({
+    const appointment = await createAppointmentService.execute({
       date: new Date(),
       provider_id: '147258',
     });
