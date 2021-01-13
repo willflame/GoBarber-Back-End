@@ -32,7 +32,7 @@ describe('CreateAppointiment', () => {
       provider_id: '147258',
     });
 
-    expect(
+    await expect(
       createAppointment.execute({
         date: appointmentDate,
         provider_id: '147258',
