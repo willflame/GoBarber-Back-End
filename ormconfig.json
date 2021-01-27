@@ -15,3 +15,4 @@
     "migrationsDir": "./src/share/infra/typeorm/migrations/"
   }
 }
+
