@@ -1,7 +1,6 @@
 import { getDate, getDaysInMonth } from 'date-fns';
 import { inject, injectable } from 'tsyringe';
 
-// import User from '@modules/users/infra/typeorm/entities/User';
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
 interface IRequest {
