@@ -1,4 +1,4 @@
-import { isBefore, startOfHour, getHour } from 'date-fns';
+import { isBefore, startOfHour, getHours } from 'date-fns';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '@shared/errors/AppError';
@@ -33,7 +33,7 @@ class CreateAppointmentService {
       throw new AppError("You can't create an appointment with yourself.");
     }
 
-    if (getHour(appointmentDate) < 8 || getHour(appointmentDate) > 17) {
+    if (getHours(appointmentDate) < 8 || getHours(appointmentDate) > 17) {
       throw new AppError('You can only create appointments between 8am and 5pm.');
     }
 
