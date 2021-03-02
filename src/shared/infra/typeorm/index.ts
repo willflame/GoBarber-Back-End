@@ -1,5 +1,5 @@
-import { createConnection } from 'typeorm';
+import { createConnections } from 'typeorm';
 
-createConnection();
+createConnections();
 
 // yarn typeorm schema:sync
