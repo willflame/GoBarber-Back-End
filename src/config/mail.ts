@@ -14,7 +14,7 @@ export default {
 
   defaults: {
     from: {
-      email: 'teste@teste.com.br',
+      email: 'adm@brazilianinbox.com.br',
       name: 'Teste de email',
     }
   }
