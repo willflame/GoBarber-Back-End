@@ -9,15 +9,12 @@ export default class AppointmentsController {
     const user_id = request.user.id;
     const { provider_id, date } = request.body;
 
-    // Chamada a Função passando como a data deve ser formatada.
-    const parseDate = parseISO(date);
-
     const createAppointment = container.resolve(CreateAppointmentService);
 
     const appointment = await createAppointment.execute({
       provider_id,
       user_id,
-      date: parseDate,
+      date,
     });
 
     return response.json(appointment);
