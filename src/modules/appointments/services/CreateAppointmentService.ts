@@ -48,6 +48,7 @@ class CreateAppointmentService {
     // Verificar se horário esta livre
     const findAppointmentInSameDate = await this.appointmentsRepository.findByDate(
       appointmentDate,
+      provider_id,
     );
 
     /**
