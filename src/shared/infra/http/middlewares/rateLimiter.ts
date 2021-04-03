@@ -4,7 +4,10 @@ import Redis from 'ioredis';
 import cacheConfig from '@config/cache';
 import AppError from '@shared/errors/AppError';
 
-const redisClient = new Redis(cacheConfig.config.redis);
+const redisClient = new Redis({
+  host: process.env.REDIS_HOST,
+  port: Number(process.env.REDIS_PORT),
+});
 
 const limiter = new RateLimiterRedis({
   storeClient: redisClient,
